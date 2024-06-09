@@ -1,3 +1,5 @@
+import time
+import random
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -39,7 +41,7 @@ def save_data(data, file_path):
             writer.writerow(row)
 
 if __name__ == "__main__":
-    urls_file = 'urls.txt'
+    urls_file = 'Open_world_by_reviews.txt'
     urls = read_urls(urls_file)
     data = []
 
