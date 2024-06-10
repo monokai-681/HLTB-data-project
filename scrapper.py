@@ -1,3 +1,5 @@
+import sys
+print(sys.executable)
 import time
 import random
 import requests
@@ -52,6 +54,8 @@ if __name__ == "__main__":
             title, groups = extract_data(soup)
             row = [title] + [f"H4: {group[0]}, H5: {group[1]}" for group in groups]
             data.append(row)
+            #print what is being scrapped
+            print(row)
         #add random delay between requests
         time.sleep(random.uniform(1, 5))
 
